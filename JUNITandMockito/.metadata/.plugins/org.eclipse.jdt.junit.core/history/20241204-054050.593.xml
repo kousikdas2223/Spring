@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SomeBusinessImplTest" project="mockito-demo" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplTest" time="0.0" displayname="SomeBusinessImplTest" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplTest]">
+    <testcase name="Test" classname="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplTest" time="0.0" displayname="Test()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplTest]/[method:Test()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.in28minutes.mockito.mockito_demo.business.DataService.retrieveAllData()" because "this.dataService" is null&#13;
+	at com.in28minutes.mockito.mockito_demo.business.SomeBusinessImpl.findMaxFromAllData(SomeBusinessImpl.java:8)&#13;
+	at com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplTest.Test(SomeBusinessImplTest.java:11)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

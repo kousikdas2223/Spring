@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculatorTest" project="JunitProject" tests="2" started="2" failures="2" errors="0" ignored="0">
+  <testsuite name="com.in28minutes.junit.CalculatorTest" time="0.01" displayname="CalculatorTest" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.junit.CalculatorTest]">
+    <testcase name="calculateSumWithNumbers" classname="com.in28minutes.junit.CalculatorTest" time="0.006" displayname="calculateSumWithNumbers()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.junit.CalculatorTest]/[method:calculateSumWithNumbers()]">
+      <failure>
+        <expected>6</expected>
+        <actual>16</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;6&gt; but was: &lt;16&gt;&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&#13;
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)&#13;
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)&#13;
+	at com.in28minutes.junit.CalculatorTest.calculateSumWithNumbers(CalculatorTest.java:13)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+    <testcase name="calculateSumWithEmptyArray" classname="com.in28minutes.junit.CalculatorTest" time="0.003" displayname="calculateSumWithEmptyArray()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.junit.CalculatorTest]/[method:calculateSumWithEmptyArray()]">
+      <failure>
+        <expected>0</expected>
+        <actual>10</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;10&gt;&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&#13;
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)&#13;
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)&#13;
+	at com.in28minutes.junit.CalculatorTest.calculateSumWithEmptyArray(CalculatorTest.java:20)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+  </testsuite>
+</testrun>

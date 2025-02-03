@@ -1,0 +1,32 @@
+package com.in28minutes.spring.basics.springin5steps;
+
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+
+import com.in28minutes.spring.basics.componentscan.ComponentDAO;
+
+@SpringBootApplication
+@ComponentScan("com.in28minutes.spring.basics.componentscan")
+public class Springin5stepsComponentScanApplication {
+	
+	static private org.slf4j.Logger LOGGER = LoggerFactory.getLogger(Springin5stepsComponentScanApplication.class);
+
+	public static void main(String[] args) {
+		
+		ApplicationContext appContext = SpringApplication.run(Springin5stepsComponentScanApplication.class, args);
+		
+		ComponentDAO componentDao = appContext.getBean(ComponentDAO.class);
+		ComponentDAO componentDao2 = appContext.getBean(ComponentDAO.class);
+		
+		LOGGER.info("{}", componentDao);
+		LOGGER.info("{}", componentDao.getJdbcConnection());
+		
+		LOGGER.info("{}", componentDao2);
+		LOGGER.info("{}", componentDao2.getJdbcConnection());
+		
+	}
+
+}

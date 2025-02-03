@@ -1,0 +1,14 @@
+package com.in28minutes.spring.basics.springin5steps;
+
+public class BinarySearchImpl {
+	
+	private SortAlgorithm sortAlgorithm;
+	
+	public int binarySearch(int [] numbers) {
+		
+		int [] sortedNumbers = sortAlgorithm.sort(numbers);
+		
+		return sortedNumbers[2];
+	}
+
+}

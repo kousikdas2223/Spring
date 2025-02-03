@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SomeBusinessImplMockTest" project="mockito-demo" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest" time="0.042" displayname="SomeBusinessImplMockTest" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest]">
+    <testcase name="findTheMaxFromAllData_Mock" classname="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest" time="0.04" displayname="findTheMaxFromAllData_Mock()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest]/[method:findTheMaxFromAllData_Mock()]"/>
+    <testcase name="findTheMaxFromAllData_Mock_With4Value" classname="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest" time="0.001" displayname="findTheMaxFromAllData_Mock_With4Value()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest]/[method:findTheMaxFromAllData_Mock_With4Value()]"/>
+  </testsuite>
+</testrun>

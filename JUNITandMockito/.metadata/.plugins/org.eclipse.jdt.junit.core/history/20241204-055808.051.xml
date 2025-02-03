@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SomeBusinessImplMockTest" project="mockito-demo" tests="2" started="2" failures="0" errors="2" ignored="0">
+  <testsuite name="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest" time="0.018" displayname="SomeBusinessImplMockTest" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest]">
+    <testcase name="findTheMaxFromAllData_Mock" classname="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest" time="0.016" displayname="findTheMaxFromAllData_Mock()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest]/[method:findTheMaxFromAllData_Mock()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.in28minutes.mockito.mockito_demo.business.DataService.retrieveAllData()" because "this.dataServiceMock" is null&#13;
+	at com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest.findTheMaxFromAllData_Mock(SomeBusinessImplMockTest.java:22)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="findTheMaxFromAllData_Mock_With4Value" classname="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest" time="0.002" displayname="findTheMaxFromAllData_Mock_With4Value()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest]/[method:findTheMaxFromAllData_Mock_With4Value()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.in28minutes.mockito.mockito_demo.business.DataService.retrieveAllData()" because "this.dataServiceMock" is null&#13;
+	at com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest.findTheMaxFromAllData_Mock_With4Value(SomeBusinessImplMockTest.java:30)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

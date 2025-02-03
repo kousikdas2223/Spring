@@ -1,0 +1,26 @@
+package com.in28minutes.spring.aop.AOPDemo.business;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.in28minutes.spring.aop.AOPDemo.data.DMODataServiceDAO;
+
+@Service
+public class NewContractBusinessService {
+	
+	@Autowired
+	DMODataServiceDAO dmoDataServiceDao;
+	
+	
+	public String submitNewContract() {
+		System.out.println("Called the NewContract Service for submission");
+		return dmoDataServiceDao.getDMOData(); 
+	}
+
+	
+	  public String createNewContract() {
+	  System.out.println("Called the NewContract Service for creation"); return
+	  dmoDataServiceDao.getDMOData(); }
+	 
+
+}

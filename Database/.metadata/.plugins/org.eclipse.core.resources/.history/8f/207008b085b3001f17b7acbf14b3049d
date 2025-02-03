@@ -1,0 +1,78 @@
+package com.in28minutes.spring.database.DatabaseDemo;
+
+import java.sql.Date;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.in28minutes.spring.database.DatabaseDemo.jdbc.Person;
+import com.in28minutes.spring.database.DatabaseDemo.jdbc.PersonJdbcDAO;
+import com.in28minutes.spring.database.DatabaseDemo.jpa.PersonJpaRepository;
+
+@SpringBootApplication
+public class SpringJpaDemoApplication implements CommandLineRunner {
+
+	Logger logger = LoggerFactory.getLogger(this.getClass());
+
+	@Autowired
+	PersonJpaRepository personJpaRepository;
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringJpaDemoApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		/*
+		 * logger.info("==============Find All Users========================");
+		 * printAllUsers();
+		 */
+		logger.info("==============Find by Id========================");
+		Person results1 = personJpaRepository.findById(10003);
+		logger.info("find by id -> {}", results1);
+		logger.info("Id -> {}", results1.getId());
+		logger.info("Name -> {}", results1.getName());
+		logger.info("Location -> {}", results1.getLocation());
+		logger.info("Date of Birth -> {}", results1.getBirthDate());
+		/*
+		 * logger.info("===============Find by name=======================");
+		 * List<Person> results2 = personDao.findByName("Ranga");
+		 * logger.info("Find by name -> {}", results2); for (Person p : results2) {
+		 * logger.info("Id -> {}", p.getId()); logger.info("Name -> {}", p.getName());
+		 * logger.info("Location -> {}", p.getLocation());
+		 * logger.info("Date of Birth -> {}", p.getBirthDate()); }
+		 * logger.info("===============Deleting the id 10001=======================");
+		 * logger.info("Deleted 1001 -> {}", personDao.deleteById(10001));
+		 * logger.info("===============Find all after deletion=======================");
+		 * printAllUsers();
+		 * logger.info("===============Inserting the id 10004=======================");
+		 * logger.info("Deleted 1001 -> {}", personDao.insertPerson(new
+		 * Person(10005,"Baban","India",new java.util.Date())));
+		 * logger.info("===============Find all after addition=======================");
+		 * printAllUsers();
+		 * logger.info("===============Updating the id 10003=======================");
+		 * logger.info("Deleted 100 -> {}", personDao.updatePerson(new
+		 * Person(10003,"","China",null)));
+		 * logger.info("===============Find all after update=======================");
+		 * printAllUsers();
+		 */
+		
+	}
+	
+/*	public void printAllUsers() {
+		List<Person> results = personDao.findAll();
+		logger.info("All users -> {}", results);
+		for (Person p : results) {
+			logger.info("Id -> {}", p.getId());
+			logger.info("Name -> {}", p.getName());
+			logger.info("Location -> {}", p.getLocation());
+			logger.info("Date of Birth -> {}", p.getBirthDate());
+		}*/
+	}
+
+}

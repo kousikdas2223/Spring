@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SomeBusinessImplMockTest" project="mockito-demo" tests="2" started="2" failures="1" errors="0" ignored="0">
+  <testsuite name="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest" time="0.056" displayname="SomeBusinessImplMockTest" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest]">
+    <testcase name="findTheMaxFromAllData_Mock" classname="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest" time="0.045" displayname="findTheMaxFromAllData_Mock()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest]/[method:findTheMaxFromAllData_Mock()]"/>
+    <testcase name="findTheMaxFromAllData_Mock_With4Value" classname="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest" time="0.01" displayname="findTheMaxFromAllData_Mock_With4Value()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest]/[method:findTheMaxFromAllData_Mock_With4Value()]">
+      <failure>
+        <expected>80</expected>
+        <actual>200</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;80&gt; but was: &lt;200&gt;&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&#13;
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)&#13;
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)&#13;
+	at com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest.findTheMaxFromAllData_Mock_With4Value(SomeBusinessImplMockTest.java:25)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+  </testsuite>
+</testrun>

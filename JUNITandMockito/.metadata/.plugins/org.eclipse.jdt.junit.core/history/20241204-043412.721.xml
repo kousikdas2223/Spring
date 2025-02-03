@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculatorTest" project="JunitProject" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.in28minutes.junit.CalculatorTest" time="0.001" displayname="CalculatorTest" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.junit.CalculatorTest]">
+    <testcase name="calculateSumWithNumbers" classname="com.in28minutes.junit.CalculatorTest" time="0.001" displayname="calculateSumWithNumbers()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.junit.CalculatorTest]/[method:calculateSumWithNumbers()]"/>
+    <testcase name="calculateSumWithEmptyArray" classname="com.in28minutes.junit.CalculatorTest" time="0.0" displayname="calculateSumWithEmptyArray()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.junit.CalculatorTest]/[method:calculateSumWithEmptyArray()]"/>
+  </testsuite>
+</testrun>

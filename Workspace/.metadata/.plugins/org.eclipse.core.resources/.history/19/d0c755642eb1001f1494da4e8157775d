@@ -1,0 +1,12 @@
+package com.in28minutes.spring.basics.springin5steps;
+
+public class BubbleSortAlgorithm{
+
+	private SortAlgorithm sortAlgorithm;
+	
+	public int binarySearch() {
+		sortAlgorithm.sort();
+		return 3;
+	}
+
+}

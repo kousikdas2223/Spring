@@ -1,0 +1,28 @@
+package com.in28minutes.mockito.mockito_demo.business;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+public class SomeBusinessImplTest {
+	
+	@Test
+	void Test() {
+		DataServiceStub dataServiceStub = new DataServiceStub();
+		SomeBusinessImpl  someBusinessImpl = new SomeBusinessImpl(dataServiceStub);
+		int result = someBusinessImpl.findMaxFromAllData();
+		assertEquals(25, result);
+		
+	}
+
+}
+
+class DataServiceStub implements DataService{
+
+	@Override
+	public int[] retrieveAllData() {
+		// TODO Auto-generated method stub
+		return new int[]{25, 15, 5};
+	}
+	
+}

@@ -1,0 +1,46 @@
+package com.in28minutes.spring.database.DatabaseDemo.jdbc;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class PersonJdbcDAO {
+	
+	@Autowired
+	JdbcTemplate jdbcTemplate;
+	
+	public List<Person> findAll(){
+		return jdbcTemplate.query("select * from person", 
+				new BeanPropertyRowMapper<Person>(Person.class));
+	}
+	
+	@SuppressWarnings("deprecation")
+	public Person findById(int id){
+		return jdbcTemplate.queryForObject("select * from spring.person where id = ?", 
+				new Object[] {id}, new BeanPropertyRowMapper<Person>(Person.class));
+	}
+	
+	@SuppressWarnings("deprecation")
+	public List<Person> findByName(String name){
+		return jdbcTemplate.query("select * from person where name = ?", 
+				new Object[] {name}, new BeanPropertyRowMapper<Person>(Person.class));
+	}
+	
+	public int deleteById(int id){
+		return jdbcTemplate.update("delete from person where id = ?", new Object[] {id});
+	}
+	
+	public int insertPerson(Person person){
+		return jdbcTemplate.update("INSERT INTO PERSON (ID, NAME, LOCATION, BIRTH_DATE ) VALUES(?,?,?,?);", 
+				new Object[] {person.getId(), person.getName(), person.getLocation(), person.getBirthDate()});
+	}
+	
+	public int updatePerson(Person person){
+		return jdbcTemplate.update("update PERSON set LOCATION=? where id=?;", 
+				new Object[] {person.getLocation(),person.getId()});
+	}
+}

@@ -1,0 +1,5 @@
+package com.in28minutes.spring.database.DatabaseDemo.springdata;
+
+public interface PersonSpringDataRepo {
+
+}

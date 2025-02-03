@@ -1,0 +1,48 @@
+package com.in28minutes.spring.database.DatabaseDemo;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.in28minutes.spring.database.DatabaseDemo.jdbc.Person;
+import com.in28minutes.spring.database.DatabaseDemo.jdbc.PersonJdbcDAO;
+
+@SpringBootApplication
+public class DatabaseDemoApplication implements CommandLineRunner {
+
+	Logger logger = LoggerFactory.getLogger(this.getClass());
+
+	@Autowired
+	PersonJdbcDAO personDao;
+
+	public static void main(String[] args) {
+		SpringApplication.run(DatabaseDemoApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		List<Person> results = personDao.findAll();
+		logger.info("All users -> {}", results);
+		for (Person p : results) {
+			logger.info("Id -> {}", p.getId());
+			logger.info("Name -> {}", p.getName());
+			logger.info("Location -> {}", p.getLocation());
+			logger.info("Date of Birth -> {}", p.getBirthDate());
+			
+			Person results1 = personDao.findById(1001);
+			logger.info("All users -> {}", results);
+			for (Person p : results) {
+				logger.info("Id -> {}", p.getId());
+				logger.info("Name -> {}", p.getName());
+				logger.info("Location -> {}", p.getLocation());
+				logger.info("Date of Birth -> {}", p.getBirthDate());
+		}
+
+	}
+
+}

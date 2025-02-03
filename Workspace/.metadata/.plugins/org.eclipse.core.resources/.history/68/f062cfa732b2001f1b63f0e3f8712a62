@@ -1,0 +1,14 @@
+package com.in28minutes.spring.basics.springin5steps.basic;
+
+import org.junit.Test;
+
+public class BinarySearchTest {
+	
+	BinarySearchImpl binarySearch;
+	
+	@Test
+	public void testBasicScenario() {
+		
+	}
+
+}

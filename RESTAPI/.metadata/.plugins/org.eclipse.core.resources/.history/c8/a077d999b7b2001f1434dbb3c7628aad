@@ -1,0 +1,19 @@
+package com.in28minutes.rest.demo_springboot_project;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class StudentController {
+	
+	public List<Student> getAllstudents(){
+		return Arrays.asList(
+			new Student(1001,"Kousik Das","Canada"),
+			new Student(1002, "Devanathan M", "India"),
+			new Student(1003, "Rajesh Duley", "India")
+		);
+	}
+
+}

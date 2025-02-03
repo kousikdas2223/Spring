@@ -1,0 +1,21 @@
+package com.in28minutes.mockito.mockito_demo.business;
+
+public class SomeBusinessImplTest {
+	
+	private DataService dataService;
+	
+	public int findMaxFromAllData() {
+		int[] data = dataService.retrieveAllData();
+		int max = Integer.MIN_VALUE;
+		for(int x: data) {
+			if(x>max)
+				x = max;
+		}
+		return max;
+	}
+
+}
+
+interface DataService{
+	int [] retrieveAllData();
+}

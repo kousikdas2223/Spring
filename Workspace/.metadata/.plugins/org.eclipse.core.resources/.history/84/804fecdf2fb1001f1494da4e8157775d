@@ -1,0 +1,17 @@
+package com.in28minutes.spring.basics.springin5steps;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+@SpringBootApplication
+public class Springin5stepsApplication {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext appContext = SpringApplication.run(Springin5stepsApplication.class, args);
+		BinarySearchImpl binarySearch = appContext.getBean(BinarySearchImpl.class);
+		binarySearch.binarySearch(new int[] {3,4,5,6});
+	}
+
+}

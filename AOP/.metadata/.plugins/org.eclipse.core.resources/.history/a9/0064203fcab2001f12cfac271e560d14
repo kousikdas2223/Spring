@@ -1,0 +1,11 @@
+package com.in28minutes.spring.aop.AOPDemo.business;
+
+public class Snippet {
+	public static void main(String[] args) {
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+	}
+}
+

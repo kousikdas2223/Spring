@@ -1,0 +1,33 @@
+package com.in28minutes.junit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CalculatorTest {
+
+	Calculator calc = new Calculator();	
+	
+	@Test
+	void calculateSumWithNumbers() {
+
+		int result = calc.calculateSum(new int[]{1,2,3});
+	
+		int expectedResult = 6;
+		
+		assertEquals(expectedResult, result);
+		//fail("Not yet implemented");
+	}
+	
+	@Test
+	void calculateSumWithEmptyArray() {
+		
+		int result = calc.calculateSum(new int[] {});
+		
+		int expectedResult = 1;
+		
+		assertEquals(expectedResult, result);
+		//fail("Not yet implemented");
+	}
+
+}

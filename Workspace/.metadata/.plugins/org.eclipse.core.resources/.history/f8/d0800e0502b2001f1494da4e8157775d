@@ -1,0 +1,32 @@
+package com.in28minutes.spring.basics.springin5steps;
+
+import java.util.logging.Logger;
+
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.in28minutes.spring.basics.springin5steps.scope.PersonDAO;
+
+@SpringBootApplication
+public class Springin5stepsComponentScanApplication {
+	
+	static private org.slf4j.Logger LOGGER = LoggerFactory.getLogger(Springin5stepsComponentScanApplication.class);
+
+	public static void main(String[] args) {
+		
+		ApplicationContext appContext = SpringApplication.run(Springin5stepsComponentScanApplication.class, args);
+		
+		PersonDAO personDao = appContext.getBean(PersonDAO.class);
+		PersonDAO personDao2 = appContext.getBean(PersonDAO.class);
+		
+		LOGGER.info("{}", personDao);
+		LOGGER.info("{}", personDao.getJdbcConnection());
+		
+		LOGGER.info("{}", personDao2);
+		LOGGER.info("{}", personDao2.getJdbcConnection());
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+
+
+public class SomeBusinessImpl {
+	
+	private DataService dataService;
+	
+	public int findMaxFromAllData() {
+		int[] data = dataService.retrieveAllData();
+		int max = Integer.MIN_VALUE;
+		for(int x: data) {
+			if(x>max)
+				x = max;
+		}
+		return max;
+	}
+
+}
+
+interface DataService{
+	int [] retrieveAllData();
+}

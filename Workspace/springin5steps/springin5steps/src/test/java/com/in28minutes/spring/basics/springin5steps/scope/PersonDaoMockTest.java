@@ -1,0 +1,50 @@
+package com.in28minutes.spring.basics.springin5steps.scope;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.in28minutes.spring.basics.springin5steps.Springin5stepsBasicApplication;
+import com.in28minutes.spring.basics.springin5steps.Springin5stepsScopeApplication;
+
+//Load the context
+@RunWith(MockitoJUnitRunner.class)
+public class PersonDaoMockTest {
+	
+	@InjectMocks
+	PersonDAO personDao;
+	
+	@Mock
+	JdbcConnection jdbcConnection;
+	
+	@Test
+	public void testBasicScenario() {
+		Mockito.when(jdbcConnection.getData()).thenReturn(new int[] {2,3,5,4,1});
+		int result = personDao.findTheMax();
+		assertEquals(5, result);
+	}
+	
+	@Test
+	public void testBasicScenario_NoElement() {
+		Mockito.when(jdbcConnection.getData()).thenReturn(new int[] {});
+		int result = personDao.findTheMax();
+		assertEquals(Integer.MIN_VALUE, result);
+	}
+	
+	@Test
+	public void testBasicScenario_EqualElements() {
+		Mockito.when(jdbcConnection.getData()).thenReturn(new int[] {2,2,2,2});
+		int result = personDao.findTheMax();
+		assertEquals(2, result);
+	}
+
+}

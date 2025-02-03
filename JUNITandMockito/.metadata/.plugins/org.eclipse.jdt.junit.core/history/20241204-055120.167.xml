@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SomeBusinessImplMockTest" project="mockito-demo" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest" time="0.831" displayname="SomeBusinessImplMockTest" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest]">
+    <testcase name="findTheMaxFromAllData_Mock" classname="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest" time="0.831" displayname="findTheMaxFromAllData_Mock()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest]/[method:findTheMaxFromAllData_Mock()]">
+      <error>java.lang.NullPointerException: Cannot read the array length because "data" is null&#13;
+	at com.in28minutes.mockito.mockito_demo.business.SomeBusinessImpl.findMaxFromAllData(SomeBusinessImpl.java:10)&#13;
+	at com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplMockTest.findTheMaxFromAllData_Mock(SomeBusinessImplMockTest.java:14)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

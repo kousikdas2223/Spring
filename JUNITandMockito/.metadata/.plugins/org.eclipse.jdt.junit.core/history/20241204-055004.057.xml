@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SomeBusinessImplStubTest.findTheMaxFromAllData_Stub" project="mockito-demo" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplStubTest" time="0.012" displayname="SomeBusinessImplStubTest" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplStubTest]">
+    <testcase name="findTheMaxFromAllData_Stub" classname="com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplStubTest" time="0.012" displayname="findTheMaxFromAllData_Stub()" uniqueid="[engine:junit-jupiter]/[class:com.in28minutes.mockito.mockito_demo.business.SomeBusinessImplStubTest]/[method:findTheMaxFromAllData_Stub()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,29 @@
+package com.in28minutes.spring.aop.AOPDemo.aspect;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Configuration;
+
+@Aspect
+@Configuration
+public class BeforeAspect {
+
+	Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	@Before("execution(* com.in28minutes.spring.aop.AOPDemo.business.*.submitNewContract(..))")
+	public void beforeMethodCallBusiness(JoinPoint joinPoint) {
+		logger.info("Check for some before work for the business calls");
+		logger.info("Calling the method {} ", joinPoint);
+		
+	}
+	
+	@Before("execution(* com.in28minutes.spring.aop.AOPDemo.data.*.*(..))")
+	public void beforeMethodCallDAO(JoinPoint joinPoint) {
+		logger.info("Check for some before work for the DAO");
+		logger.info("Calling the method {} ", joinPoint);
+		
+	}
+}

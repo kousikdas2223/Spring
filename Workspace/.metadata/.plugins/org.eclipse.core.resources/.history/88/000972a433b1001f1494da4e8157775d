@@ -1,0 +1,8 @@
+package com.in28minutes.spring.basics.springin5steps;
+
+public class Snippet {
+	public static void main(String[] args) {
+		Springin5stepsBasicApplication
+	}
+}
+

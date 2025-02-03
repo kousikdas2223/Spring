@@ -1,0 +1,18 @@
+package com.in28minutes.mockito.mockito_demo.business;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+public class SomeBusinessImplMockTest {
+	
+	@Test
+	void findTheMaxFromAllData_Mock() {
+		DataServiceStub dataServiceStub = new DataServiceStub();
+		SomeBusinessImpl  someBusinessImpl = new SomeBusinessImpl(dataServiceStub);
+		int result = someBusinessImpl.findMaxFromAllData();
+		assertEquals(25, result);
+		
+	}
+
+}
